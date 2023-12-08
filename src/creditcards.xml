@@ -1,0 +1,22 @@
+<creditCards>
+    <creditCard>
+        <cardNumber>4532758771091795</cardNumber>
+        <expirationDate>12/23</expirationDate>
+        <cardHolderName>John Doe</cardHolderName>
+    </creditCard>
+    <creditCard>
+        <cardNumber>5412345678901125</cardNumber>
+        <expirationDate>12/24</expirationDate>
+        <cardHolderName>Jane Smith</cardHolderName>
+    </creditCard>
+    <creditCard>
+        <cardNumber>341234567890123</cardNumber>
+        <expirationDate>01/23</expirationDate>
+        <cardHolderName>Alan Brown</cardHolderName>
+    </creditCard>
+    <creditCard>
+        <cardNumber>11123456789123</cardNumber>
+        <expirationDate>11/22</expirationDate>
+        <cardHolderName>Chloe Johnson</cardHolderName>
+    </creditCard>
+</creditCards>

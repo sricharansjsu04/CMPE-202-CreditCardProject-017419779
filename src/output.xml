@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<creditCards>
+    <creditCard>
+        <cardNumber>4532758771091795</cardNumber>
+        <cardType>Visa</cardType>
+    </creditCard>
+    <creditCard>
+        <cardNumber>5412345678901125</cardNumber>
+        <cardType>Master</cardType>
+    </creditCard>
+    <creditCard>
+        <cardNumber>341234567890123</cardNumber>
+        <cardType>AmEx</cardType>
+    </creditCard>
+    <creditCard>
+        <cardNumber>11123456789123</cardNumber>
+        <error>Invalid credit card number</error>
+    </creditCard>
+</creditCards>

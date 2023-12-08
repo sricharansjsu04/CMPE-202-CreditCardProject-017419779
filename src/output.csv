@@ -1,0 +1,5 @@
+CardNumber,CardType,Error
+45327587710917,,Invalid credit card number
+5412345678901256,Master,
+341234567890123,AmEx,
+6011123456789123,DiscoverCC,

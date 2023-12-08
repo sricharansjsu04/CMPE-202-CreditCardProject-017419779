@@ -1,0 +1,22 @@
+[
+    {
+        "cardNumber": "4532758771091798",
+        "expirationDate": "12/23",
+        "cardHolderName": "John Doe"
+    },
+    {
+        "cardNumber": "5412345678901125",
+        "expirationDate": "12/24",
+        "cardHolderName": "Jane Smith"
+    },
+    {
+        "cardNumber": "341234567890123",
+        "expirationDate": "01/23",
+        "cardHolderName": "Alan Brown"
+    },
+    {
+        "cardNumber": "6011123456789123",
+        "expirationDate": "11/22",
+        "cardHolderName": "Chloe Johnson"
+    }
+]
