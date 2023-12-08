@@ -1,31 +1,37 @@
 package com.creditcard;
 
-import com.creditcard.card.AmExCC;
-import com.creditcard.card.CreditCard;
-import com.creditcard.card.DiscoverCC;
-import com.creditcard.card.MasterCC;
-import com.creditcard.card.VisaCC;
+import com.creditcard.card.*;
+import com.creditcard.validation.*;
 
-public class CreditCardFactory  {
+public class CreditCardFactory {
 
     public static CreditCard createCreditCard(String cardNumber, String expirationDate, String cardHolderName) {
+        // Common validations (null, empty, non-numeric, length)
+        commonValidations(cardNumber);
 
-
-        System.out.println("Card number and length is "+ cardNumber+ " length is "+cardNumber.length());
-        
-        if (cardNumber.startsWith("4") && (cardNumber.length() == 13 || cardNumber.length() == 16)) {
+        // Strategy pattern usage
+        if (new VisaCardValidationStrategy().isValid(cardNumber)) {
             return new VisaCC(cardNumber, expirationDate, cardHolderName);
-        } else if (cardNumber.startsWith("5") && cardNumber.length() == 16 && 
-                   Integer.parseInt(cardNumber.substring(1, 2)) >= 1 && 
-                   Integer.parseInt(cardNumber.substring(1, 2)) <= 5) {
+        } else if (new MasterCardValidationStrategy().isValid(cardNumber)) {
             return new MasterCC(cardNumber, expirationDate, cardHolderName);
-        } else if (cardNumber.startsWith("3") && cardNumber.length() == 15 &&
-                   (cardNumber.substring(1, 2).equals("4") || cardNumber.substring(1, 2).equals("7"))) {
+        } else if (new AmExCardValidationStrategy().isValid(cardNumber)) {
             return new AmExCC(cardNumber, expirationDate, cardHolderName);
-        } else if (cardNumber.startsWith("6011") && cardNumber.length() == 16) {
+        } else if (new DiscoverCardValidationStrategy().isValid(cardNumber)) {
             return new DiscoverCC(cardNumber, expirationDate, cardHolderName);
         } else {
-            throw new IllegalArgumentException("Invalid credit card number");
+            throw new IllegalArgumentException("Invalid: not a possible card number");
+        }
+    }
+
+    private static void commonValidations(String cardNumber) {
+        if (cardNumber == null || cardNumber.trim().isEmpty()) {
+            throw new IllegalArgumentException("Invalid: empty/null card number");
+        }
+        if (!cardNumber.matches("\\d+")) {
+            throw new IllegalArgumentException("Invalid: non numeric characters");
+        }
+        if (cardNumber.length() > 19) {
+            throw new IllegalArgumentException("Invalid credit card: Credit card numbers cannot exceed 19 digits");
         }
     }
 }
