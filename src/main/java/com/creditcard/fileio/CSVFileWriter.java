@@ -14,10 +14,10 @@ public class CSVFileWriter implements IFileWriter {
 
     @Override
     public void writeCreditCards(String filePath, List<CreditCardWrapper> creditCards) {
-        // Define the CSV format with the appropriate header
+        // Define the CSV format with the updated header (without the 'Error' field)
         CSVFormat format = CSVFormat.Builder.create(CSVFormat.DEFAULT)
-            .setHeader("CardNumber", "CardType", "Error")
-            .setSkipHeaderRecord(false) // Set to false to include the header
+            .setHeader("CardNumber", "CardType") // Removed "Error" from the header
+            .setSkipHeaderRecord(false)
             .build();
 
         // Try-with-resources will auto-close the writer and printer
@@ -26,10 +26,10 @@ public class CSVFileWriter implements IFileWriter {
             for (CreditCardWrapper wrapper : creditCards) {
                 if (wrapper.isValid()) {
                     // Valid card: Write card number and card type
-                    csvPrinter.printRecord(wrapper.getCreditCard().getCardNumber(), wrapper.getCreditCard().getCardType(), "");
+                    csvPrinter.printRecord(wrapper.getCreditCard().getCardNumber(), wrapper.getCreditCard().getCardType());
                 } else {
-                    // Invalid card: Write card number and error message
-                    csvPrinter.printRecord(wrapper.getCardNumber(), "", wrapper.getErrorMessage());
+                    // Invalid card: Write card number and error message under 'CardType'
+                    csvPrinter.printRecord(wrapper.getCardNumber(), wrapper.getErrorMessage());
                 }
             }
             csvPrinter.flush();

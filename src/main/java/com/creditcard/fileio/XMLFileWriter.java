@@ -38,21 +38,11 @@ public class XMLFileWriter implements IFileWriter {
                 number.appendChild(document.createTextNode(creditCard.getCardNumber()));
                 cardElement.appendChild(number);
 
-                // Card Type (based on the class name of the CreditCard object)
-
-                if (creditCard.isValid()) {
-                    Element type = document.createElement("cardType");
-                    type.appendChild(document.createTextNode(creditCard.getCreditCard().getCardType()));
-                    cardElement.appendChild(type);
-                }
-                
-
-                // Error Message (if the card is invalid)
-                if (!creditCard.isValid()) {
-                    Element error = document.createElement("error");
-                    error.appendChild(document.createTextNode(creditCard.getErrorMessage()));
-                    cardElement.appendChild(error);
-                }
+                // Card Type or Error
+                Element type = document.createElement("cardType");
+                String cardTypeOrError = creditCard.isValid() ? creditCard.getCreditCard().getCardType() : creditCard.getErrorMessage();
+                type.appendChild(document.createTextNode(cardTypeOrError));
+                cardElement.appendChild(type);
             }
 
             // Create the XML file
