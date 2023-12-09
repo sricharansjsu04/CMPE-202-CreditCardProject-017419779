@@ -9,7 +9,6 @@ public class DiscoverCC extends CreditCard{
     }
 
     @Override
-    @JsonProperty("cardType")
     public String getCardType() {
         return "DiscoverCC";
     }

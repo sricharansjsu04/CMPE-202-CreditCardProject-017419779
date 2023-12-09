@@ -15,7 +15,6 @@ public class AmExCC extends CreditCard {
     }
 
     @Override
-    @JsonProperty("cardType")
     public String getCardType() {
         return "AmEx";
     }

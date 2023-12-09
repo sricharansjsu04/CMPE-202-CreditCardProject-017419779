@@ -14,7 +14,6 @@ public class VisaCC extends CreditCard {
     }
 
     @Override
-    @JsonProperty("cardType")
     public String getCardType() {
         return "Visa";
     }

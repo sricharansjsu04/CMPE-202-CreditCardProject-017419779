@@ -15,7 +15,6 @@ public class MasterCC extends CreditCard{
 
 
     @Override
-    @JsonProperty("cardType")
     public String getCardType() {
         return "Master";
     }
