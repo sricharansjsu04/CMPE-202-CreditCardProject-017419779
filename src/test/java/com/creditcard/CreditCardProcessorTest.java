@@ -24,21 +24,18 @@ public class CreditCardProcessorTest {
     public void testProcessCSVFile() throws Exception {
         CreditCardProcessor.processFile(CSV_INPUT_FILE, CSV_OUTPUT_FILE);
         Assert.assertTrue(Files.exists(Paths.get(CSV_OUTPUT_FILE)));
-        // Further assertions to check the file content
     }
 
     @Test
     public void testProcessJSONFile() throws Exception {
         CreditCardProcessor.processFile(JSON_INPUT_FILE, JSON_OUTPUT_FILE);
         Assert.assertTrue(Files.exists(Paths.get(JSON_OUTPUT_FILE)));
-        // Further assertions to check the file content
     }
 
     @Test
     public void testProcessXMLFile() throws Exception {
         CreditCardProcessor.processFile(XML_INPUT_FILE, XML_OUTPUT_FILE);
         Assert.assertTrue(Files.exists(Paths.get(XML_OUTPUT_FILE)));
-        // Further assertions to check the file content
     }
 
 

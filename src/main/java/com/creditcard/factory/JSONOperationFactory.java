@@ -1,4 +1,9 @@
-package com.creditcard.fileio;
+package com.creditcard.factory;
+
+import com.creditcard.fileio.IFileParser;
+import com.creditcard.fileio.IFileWriter;
+import com.creditcard.fileio.JSONFileParser;
+import com.creditcard.fileio.JSONFileWriter;
 
 public class JSONOperationFactory extends FileOperationFactory {
 
