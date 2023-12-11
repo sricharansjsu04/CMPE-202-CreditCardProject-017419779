@@ -40,6 +40,22 @@ The design has been extended to handle multiple input and output file formats.
 - `CardValidationStrategy`: Encapsulates validation logic for each card type.
 - File operation factories: Handle reading and writing of different file formats.
 
+## Design Patterns Diagrams
+
+## Factory Pattern Diagram
+![Abstract Factory Pattern](https://github.com/sricharansjsu04/CMPE-202-CreditCardProject-017419779/blob/main/images/Factory.png)
+
+## Strategy Pattern Diagram
+![Abstract Factory Pattern](https://github.com/sricharansjsu04/CMPE-202-CreditCardProject-017419779/blob/main/images/strategy.png)
+
+## Abstract Factory Pattern Diagram
+![Abstract Factory Pattern](https://github.com/sricharansjsu04/CMPE-202-CreditCardProject-017419779/blob/main/images/abstractFactory.png)
+
+## Adapter Pattern Diagram
+![Abstract Factory Pattern](https://github.com/sricharansjsu04/CMPE-202-CreditCardProject-017419779/blob/main/images/Adapter.png)
+
+
+
 ## Repository Information
 - **Author:** Sri Charan Reddy Mallu (017419779)
 - **GitHub Repository:** [CMPE-202-CreditCardProject](https://github.com/gopinathsjsu/individual-project-sricharansjsu04)
