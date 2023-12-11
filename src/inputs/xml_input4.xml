@@ -1,0 +1,17 @@
+<creditCard>
+  <creditCard>
+      <cardNumber>4123456789123</cardNumber>
+      <expirationDate>04/26</expirationDate>
+      <cardHolderName>Martha Clark</cardHolderName>
+  </creditCard>
+  <creditCard>
+      <cardNumber>6011111100007756</cardNumber>
+      <expirationDate>02/24</expirationDate>
+      <cardHolderName>John Doe</cardHolderName>
+  </creditCard>
+  <creditCard>
+      <cardNumber>384856341908126</cardNumber>
+      <expirationDate>03/23</expirationDate>
+      <cardHolderName>Jane S. Dayton</cardHolderName>
+  </creditCard>
+</creditCard>
